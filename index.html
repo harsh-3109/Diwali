@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Diwali</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Three.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo-dot"></div>
+      <h1>Happy Diwali — <span class="sparkle">Pareshan Aatma</span></h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="wish.html">Wishes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div id="homeCanvas" class="canvas-wrap"></div>
+      <div class="canvas-info">
+        <h2>Happy Diwali <span class="glow-text">Samiksha</span></h2>
+        <p>May your life be as bright and beautiful as a thousand diyas. May the lamps of Diwali illuminate your life with health, wealth, and happiness</p>
+        <br>
+        <a href="about.html"><button class="btn">Explore Her Magic →</button></a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>About U</h3>
+      <p>Y batane ki koi need nhi...u already knows that...U are the great, best, kindhearted, caring, or bhi bahut kuch h kehne k liy english km pad jayegi btane k liy...but mujhe abhi inn words ka mtlb hi pta h....baaki baad m sikh kr likunga.... </p>
+    </section>
+  </main>
+
+  <footer class="footer">Made with ♥ for Samiksha — Happy Diwali</footer>
+
+  <script>
+    // initialize scene in the 'homeCanvas' element
+    window.addEventListener('load', ()=>{
+      // createScene(containerId, options)
+      Diwali3.createScene('homeCanvas', { sparklesCount: 80 });
+    });
+  </script>
+</body>
+</html>

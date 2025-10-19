@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cuteness — [Her Name]</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo-dot"></div><h1>Cuteness — <span class="sparkle">[Her Name]</span></h1></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="cuteness.html">Cuteness</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="wish.html">Wishes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div id="cuteCanvas" class="canvas-wrap"></div>
+      <div class="canvas-info">
+        <h2>Little things that make her adorable</h2>
+        <p>From her giggle to the way she tucks hair behind her ear — each tiny moment is a spark of joy.</p>
+        <p style="margin-top:10px;">Add short memories (1-3):</p>
+        <ol>
+          <li>The way she laughs at silly jokes.</li>
+          <li>Her tiny notes left for friends.</li>
+          <li>Unexpected kindness that surprises you.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Interactive</h3>
+      <p>Click the diya on this page (or tap) to create a small sparkle (if implemented).</p>
+    </section>
+  </main>
+
+  <footer class="footer">Cuteness overload ✨</footer>
+
+  <script>
+    window.addEventListener('load', ()=>{
+      Diwali3.createScene('cuteCanvas', { sparklesCount: 60 });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wishes — [Her Name]</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo-dot"></div><h1>Wishes — <span class="sparkle">Samiksha/ Pareshan Aatma/ Bhullakar/ Compass</span></h1></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="wish.html">Wishes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div id="wishCanvas" class="canvas-wrap"></div>
+      <div class="canvas-info">
+        <h2>Thank you for being my brightest diya</h2>
+        <p>Bss bhagwan ji s yahi pray krunga...tm kabhi parehan n ho...tmhari life ki problems km ho jaye....Tm udaas hona bhul jao....Or tm hamesha hasti raho fir log tmhe pagal kahenge&#128514&#128514...
+            <br>
+            Pta h tm itti khoobsurat itti khoobsurat itti khoobsurat ho ki log tmhari khoobsurati s jalte h...logo ka toh kaam h jalna...logo ko itna jalao ki jaal k raakh ho jaye or jalne mehek puri duniya m ghume..
+            <br>
+            Abhi tk apni life tmse khoobsurat, sunadar, pyari ladki mene nhi dekhi....
+            <br>
+            <br>
+            Happy Diwali!! Or hnn jyada patake mt phodhna kyuki tm bhi kisi patake s km nhi...
+        </p>
+        <div style="margin-top:12px;">
+          <button id="autoBtn" class="btn">Start Mini Show</button>
+          <button id="burstBtn" class="btn" style="margin-left:8px">Burst Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Final message</h3>
+      <p>Once Again Happy Diwali!!....Or Aaj ki tmhari ek photo toh m bhi deserve krta hu.</p>
+    </section>
+  </main>
+
+  <footer class="footer">Fireworks for you 🎆</footer>
+
+  <script>
+    let sceneApi;
+    window.addEventListener('load', ()=>{
+      // enable auto fireworks and click-to-fire
+      sceneApi = Diwali3.createScene('wishCanvas', { sparklesCount: 40, fireworksOnClick: true, autoFireworks: false });
+      const burstBtn = document.getElementById('burstBtn');
+      burstBtn.addEventListener('click', ()=>{
+        // spawn a near-center burst
+        sceneApi.spawnFirework(0, 1.0, 0);
+      });
+      const autoBtn = document.getElementById('autoBtn');
+      let running = false;
+      let intervalId = null;
+      autoBtn.addEventListener('click', ()=>{
+        running = !running;
+        if(running){
+          autoBtn.textContent = 'Stop Show';
+          intervalId = setInterval(()=> {
+            const x = (Math.random()*2-1) * 1.6;
+            const y = 0.8 + Math.random()*1.3;
+            const z = (Math.random()*2-1) * 0.6;
+            sceneApi.spawnFirework(x,y,z);
+          }, 800);
+        } else {
+          autoBtn.textContent = 'Start Mini Show';
+          clearInterval(intervalId);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

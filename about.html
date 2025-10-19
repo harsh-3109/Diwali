@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Pareshan Aatma</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo-dot"></div><h1>About — <span class="sparkle">Pareshan Aatma</span></h1></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="wish.html">Wishes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div id="aboutCanvas" class="canvas-wrap"></div>
+      <div class="canvas-info">
+        <h2>You lights up every room</h2>
+        <p>Your kindness glows brighter than the lamps of Diwali. You listens, u cares, u shows up — small gestures that mean the world.</p>
+        <p style="margin-top:12px;font-weight:600;color:rgba(255,255,255,0.9)">A few lines for u:</p>
+        <ul>
+          <li>Kindness that comforts others.</li>
+          <li>A smile that warms the coldest day.</li>
+          <li>Always brings out the best in people.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Message</h3>
+      <p>Pta h tm bahut strong ho....ho ki toh pta ni but pehle thi...abb bahut emotional ho gyi ho...thoda s apna khyal rakho...or dusro k baare m itta ni sochte...pehle apne baare m socho...bahut sara khaya karo....moti ho jayo...phir m tmse moti bola krunga. 
+      <br>
+       Pta h hackathon m tmne Google ki tarah kaam kiya tha mere liy...kahi bhi fasta tmne suggestion di....Or translator ka bhi kaam kiya tha tmne....Ek nya naam mil gya tmhara...Compass(Compass ki tarah rasta dhikhati ho agr kahi phas jata hu toh). 
+    </section>
+  </main>
+
+  <footer class="footer">Made with care — for you</footer>
+
+  <script>
+    window.addEventListener('load', ()=>{
+      Diwali3.createScene('aboutCanvas', { sparklesCount: 90 });
+    });
+  </script>
+</body>
+</html>
